@@ -153,6 +153,18 @@ peer: PeURxj4Q75RaVhBKkRTpNsBPiPSGb5oQijgJsTa29hg=
  allowed ips: 171.16.0.2/32, fd0d:86fa:c3bc::/128
 ```
 
+Check the connectivity by running command below:  
+```
+Ping 172.16.0.2 
+``` 
+And run the below command in client machine to check the internet is comming from server 
+```
+curl ifconfig.me 
+```
+it should the show the public ipaddress of server
+```
+98.42.86.2
+```
 
 
 
