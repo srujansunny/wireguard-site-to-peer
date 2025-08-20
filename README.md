@@ -166,6 +166,18 @@ it should the show the public ipaddress of server
 98.42.86.2
 ```
 
+How to Be 100% Sure It's Routed Through Server
+🔍 Use a Unique id for Ping
+On the client, run:
+
+ping -p 41414141 8.8.8.8
+This sends a custom payload (AAAA hex = 41).
+
+Now on the server, run:
+sudo tcpdump -X -i eth0 icmp
+
+If you see 41414141 (ASCII AAAA) in the payload, then you know the traffic came from the client, not the server itself.
+
 
 
 
